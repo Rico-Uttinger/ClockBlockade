@@ -9,7 +9,7 @@ public class Hole : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class Hole : MonoBehaviour
         if (Timer.TimeSinceStart / Timer.timePerHour > hour)
         {
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
-            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
         }
     }
 }
