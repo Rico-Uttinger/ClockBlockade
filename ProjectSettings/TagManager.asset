@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ClockHand
+  - Deadly
+  - 3
   layers:
   - Default
   - TransparentFX
