@@ -11,6 +11,14 @@ public class Move : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            speed = 7.5f;
+        }
+        else
+        {
+            speed = 5f;
+        }
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(speed * Time.deltaTime * Vector2.up);

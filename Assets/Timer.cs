@@ -15,6 +15,13 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TimeSinceStart += Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            TimeSinceStart += Time.deltaTime * 1.5f;
+        }
+        else
+        {
+            TimeSinceStart += Time.deltaTime;
+        }
     }
 }
