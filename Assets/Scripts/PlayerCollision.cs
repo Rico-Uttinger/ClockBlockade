@@ -1,29 +1,25 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Needed for scene reloading
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
-    // This will be triggered when the player collides with a hole
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Deadly")) 
+        if (other.CompareTag("Hole")) // Check if the player collided with a hole
         {
             HandlePlayerDeath();
         }
     }
 
-    // Restart the level when the player falls into a hole
     private void HandlePlayerDeath()
     {
         Debug.Log("Player fell into a hole! Restarting level...");
         RestartLevel();
     }
 
-    // Method to reload the current scene (restart the level)
     private void RestartLevel()
     {
-        // Get the active scene (current level) and reload it
         Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        SceneManager.LoadScene(currentScene.name); // Reload the current scene
     }
 }

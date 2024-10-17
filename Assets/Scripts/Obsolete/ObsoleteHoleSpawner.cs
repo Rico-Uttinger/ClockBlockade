@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HoleSpawner : MonoBehaviour
+public class ObsoleteHoleSpawner : MonoBehaviour
 {
     public GameObject holePrefab; // Prefab of the hole to be spawned
     public int initialHoleCount = 1; // Starting number of holes
