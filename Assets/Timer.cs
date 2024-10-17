@@ -5,7 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public static float TimeSinceStart { get; set; } = 0;
-    public static float timePerHour = 10;
+    public static float timePerHour = 5;
     // Start is called before the first frame update
     void Start()
     {
