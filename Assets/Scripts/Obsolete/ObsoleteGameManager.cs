@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class ObsoleteGameManager : MonoBehaviour
 {
-    public HoleSpawner holeSpawner; // Reference to the HoleSpawner
+    public ObsoleteHoleSpawner holeSpawner; // Reference to the HoleSpawner
     public int hoursPassed = 0;
     public Transform player;
     public Transform clockCenter;
