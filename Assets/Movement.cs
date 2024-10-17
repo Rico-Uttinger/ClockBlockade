@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class Move : MonoBehaviour
 
     void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ClockHand"))
+        if (collision.gameObject.CompareTag("Deadly"))
         {
             Die();
         }
@@ -41,7 +42,8 @@ public class Move : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Dead");
+        Timer.TimeSinceStart = 0;
+        SceneManager.LoadScene("SampleScene");
     }
 
 }
